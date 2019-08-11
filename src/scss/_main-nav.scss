@@ -1,0 +1,48 @@
+.main-nav {
+    margin: 0 auto;
+}
+
+.main-nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav__list-item {
+}
+
+.main-nav__link {
+    color: $blue-text;
+    font-size: 16px;
+    padding: 6px 17px;
+    display: block;
+    transition: color 0.2s;
+    position: relative;
+
+    .main-nav__list-item.active & {
+        cursor: default;
+        pointer-events: none;
+        &::after {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: $orange;
+            border-radius: 50%;
+            margin-top: 5px;
+        }
+    }
+
+    &:link,
+    &:visited {
+        color: $blue-text;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: $orange;
+    }
+}
