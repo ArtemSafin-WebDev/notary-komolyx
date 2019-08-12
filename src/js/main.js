@@ -3,6 +3,8 @@
 
 import objectFitImages from 'object-fit-images';
 import detectIt from 'detect-it';
+import publicRegistersSlider from './publicRegistersSlider';
+import forms from './forms';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -20,4 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('no-touch');
         document.body.classList.add('touch');
     }
+
+    // Слайдер публичных реестров
+
+    publicRegistersSlider();
+
+    // Валидация форм и маски ввода
+
+    forms();
 });

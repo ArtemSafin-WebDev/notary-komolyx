@@ -1,0 +1,270 @@
+.page-footer {
+    background-color: $blue;
+    color: white;
+}
+
+.page-footer__top-row {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    @include breakpoint(laptop) {
+        padding-top: 55px;
+        padding-bottom: 50px;
+        flex-wrap: wrap;
+        margin: -25px;
+    }
+}
+
+.page-footer__bottom-row {
+    display: flex;
+    align-items: center;
+    padding: 42px 0;
+    position: relative;
+    @include breakpoint(laptop) {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    &::before {
+        content: '';
+        top: 0;
+        width: 100vw;
+        position: absolute;
+        height: 2px;
+        left: calc((100vw - 100%) / 2 * -1);
+        background-color: #393B74;
+        z-index: 10;
+    }
+}
+
+
+
+
+.page-footer__copyright {
+    font-size: 14px;
+    line-height: 2;
+    color: white;
+    margin-right: 150px;
+    @include breakpoint(laptop) {
+        margin: 0;
+        display: block;
+    }
+}
+
+.page-footer__user-policy {
+    font-size: 14px;
+    line-height: 2;
+    color: #9698B4;
+    @include breakpoint(laptop) {
+        display: block;
+    }
+}
+
+
+
+
+
+.page-footer__made-by {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 2;
+    color: #9698B4;
+    margin-left: auto;
+}
+
+
+.page-footer__made-by-logo {
+    margin-left: 10px;
+}
+
+
+
+.page-footer__about-notary {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    @include breakpoint(laptop) {
+        width: 50%;
+        padding: 25px;
+    }
+}
+
+
+.page-footer__about-notary-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.page-footer__about-notary-city {
+    color: #9698B4;
+    font-size: 13px;
+    display: block;
+    margin-top: -4px;
+    margin-bottom: 7px;
+}
+
+
+.page-footer__about-notary-name {
+    font-size: 26px;
+    line-height: 1;
+    color: white;
+    font-weight: 500;
+    font-family: $spectral;
+   
+    display: block;
+}
+
+.page-footer__about-notary-logo {
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+
+
+.page-footer__secondary-nav {
+    width: 280px;
+    margin-left: auto;
+    @include breakpoint(laptop) {
+        margin: 0;
+        width: 50%;
+        padding: 25px;
+    }
+}
+
+.page-footer__secondary-nav-list-item {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.page-footer__secondary-nav-link {
+    color: white;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: underline;
+    }
+}
+
+
+
+.page-footer__contact-info {
+    width: 280px;
+    margin-left: auto;
+    @include breakpoint(laptop) {
+        margin: 0;
+        width: 50%;
+        padding: 25px;
+    }
+}
+
+
+.page-footer__contact-info-heading {
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+
+.page-footer__contact-info-address {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+.page-footer__contact-info-phone-links {
+    margin-top: 25px;
+}
+
+
+.page-footer__contact-info-phone-link {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    display: block;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: underline;
+    }
+}
+
+
+.page-footer__contact-info-email {
+    color: #9698B4;
+    font-size: 14px;
+    line-height: 1.8;
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    &::after {
+        content: '';
+        top: 100%;
+       
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #9698B4;
+        position: absolute;
+    }
+    &:link,
+    &:visited {
+        color: #9698B4;
+    }
+}
+
+
+
+.page-footer__regime {
+    width: 240px;
+    margin-left: auto;
+    @include breakpoint(laptop) {
+        margin: 0;
+        width: 50%;
+        padding: 25px;
+    }
+}
+
+
+.page-footer__regime-heading {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.page-footer__regime-paragraph {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+
+.page-footer__apply-btn {
+    margin-top: auto;
+    background-color: #fff;
+    color: $blue-text;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 22px 38px;
+    align-self: flex-start;
+    &:link,
+    &:visited {
+        color: $blue-text;
+    }
+}

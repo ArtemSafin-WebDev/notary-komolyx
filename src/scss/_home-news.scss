@@ -3,6 +3,10 @@
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
+    @include breakpoint(laptop) {
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
     &::before {
         content: '';
         pointer-events: none;
@@ -13,6 +17,9 @@
         bottom: 0;
         left: calc((100vw - 100%) / 2 * -1);
         background-color: $blue;
+        @include breakpoint(laptop) {
+            background-color: #393b75;
+        }
     }
 }
 
@@ -22,18 +29,20 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 1.2;
-    
+    @include breakpoint(laptop) {
+        font-size: 32px;
+    }
 }
 
-
 .home-news__all-news-link {
-    color: #9698B4;
+    color: #9698b4;
     font-size: 16px;
     line-height: 1.5;
     margin-left: auto;
+
     &:link,
     &:visited {
-        color: #9698B4;
+        color: #9698b4;
     }
 
     .no-touch &:hover,
@@ -41,7 +50,6 @@
         text-decoration: underline;
     }
 }
-
 
 .home-news__top-row {
     display: flex;
@@ -53,11 +61,23 @@
     display: flex;
     flex-wrap: wrap;
     margin: -12px;
+    @include breakpoint(laptop) {
+        margin: -10px;
+    }
 }
 
 .home-news__list-item {
     padding: 12px;
     width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(laptop) {
+        width: 50%;
+        padding: 10px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .home-news__card {
@@ -66,11 +86,16 @@
     background-color: #fff;
     padding: 30px;
     padding-top: 35px;
-
+    flex-grow: 1;
     border-radius: 10px;
     min-height: 260px;
-    transition: background-color 0.2s, color .2s;
-
+    transition: background-color 0.2s, color 0.2s;
+    @include breakpoint(laptop) {
+        padding: 20px;
+        padding-top: 25px;
+        padding-bottom: 30px;
+        min-height: 210px;
+    }
     .no-touch &:hover,
     .touch &:active {
         background-color: $orange;
@@ -83,11 +108,9 @@
             color: white;
         }
 
-
         .home-news__card-date {
             color: white;
         }
-
 
         .home-news__card-arrow {
             background-color: #fff;
@@ -108,6 +131,9 @@
     font-size: 18px;
     line-height: 1.2;
     margin-bottom: 12px;
+    @include breakpoint(laptop) {
+        font-size: 17px;
+    }
 }
 
 .home-news__card-content {
@@ -115,7 +141,7 @@
     line-height: 1.5;
     color: $light-text;
     margin-bottom: 15px;
-    transition: color .2s;
+    transition: color 0.2s;
 }
 
 .home-news__card-date-block {
@@ -136,12 +162,12 @@
     border: 1px solid #e7e3da;
     border-radius: 50%;
     background-color: rgba(white, 0);
-    transition: background-color .2s, border-color .2s;
+    transition: background-color 0.2s, border-color 0.2s;
     svg {
         fill: $light-text;
         width: 22px;
         height: 22px;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 }
 
@@ -151,7 +177,7 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    transition: color .2s;
+    transition: color 0.2s;
 }
 
 .home-news__card-date-d {

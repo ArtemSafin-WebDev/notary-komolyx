@@ -1,0 +1,202 @@
+
+.contact-us {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include breakpoint(laptop) {
+        padding-top: 45px;
+        padding-bottom: 60px;
+        
+    }
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.contact-us__heading {
+    font-size: 42px;
+    font-weight: 500;
+    font-family: $spectral;
+    line-height: 1.2;
+    color: $blue-text;
+    @include breakpoint(laptop) {
+        font-size: 32px;
+    }
+}
+
+.contact-us__paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $light-text;
+    margin-top: 30px;
+    @include breakpoint(laptop) {
+        margin-top: 18px;
+    }
+}
+
+
+.contact-us__text-block {
+    width: 480px;
+    margin-right: 40px;
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.contact-us__form-block {
+    width: 700px;
+    margin-left: auto;
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+
+.contact-us__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+    @include breakpoint(laptop) {
+        margin: -10px;
+    }
+}
+
+
+.contact-us__form-column {
+    padding: 12px;
+    width: 50%;
+    &--fullwidth {
+        width: 100%;
+    }
+    @include breakpoint(laptop) {
+        padding: 10px;
+    }
+}
+
+
+.parsley-errors-list {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #FF391E;
+    text-align: right;
+    margin-top: 5px;
+}
+
+
+.contact-us__form-input,
+.contact-us__form-textarea {
+    background-color: #E7E3DA;
+    border: 1px solid #E7E3DA;
+    font: inherit;
+    color: $blue-text;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 20px 20px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color .2s, background-color .2s;
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: #B4AEA4;
+    }
+
+    &.parsley-error {
+        border-color: #FF391E;
+    }
+
+    &:focus {
+        border-color: #B4AEA4;
+    }
+
+    
+
+    @include placeholder {
+        font: inherit;
+        color: $light-text;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+}
+
+
+.contact-us__form-textarea {
+    height: 180px;
+    display: block;
+}
+
+
+.contact-us__form-submit-column {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+}
+
+
+.contact-us__form-user-policy {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $light-text;
+    a {
+        position: relative;
+        transition: color .2s;
+        &:link,
+        &:visited {
+            color: $light-text;
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: $orange;
+            &::before {
+                background-color: $orange;
+            }
+        }
+        &::before {
+            content: '';
+            height: 1px; 
+            background-color: $light-text;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            margin-top: 2px;
+            position: absolute;
+            transition: background-color .2s;
+        }
+    }
+}
+
+
+.contact-us__form-submit-btn {
+    font: inherit;
+    background-color: $orange;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 22px 64px;
+    outline: none;
+    margin-left: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color .2s;
+    @include breakpoint(mobile) {
+        margin-left: 10px;
+    }
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: $orange-hover;
+    }
+
+    .no-touch &:active {
+        background-color: $orange-active;
+    }
+}
+
+

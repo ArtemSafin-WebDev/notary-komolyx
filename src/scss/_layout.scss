@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 0 $desktop-content-padding;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(small-mobile) {
         max-width: none;
         padding: 0 $mobile-content-padding;
     }
@@ -38,4 +38,7 @@
     flex-direction: column;
     flex-grow: 1;
     overflow-x: hidden;
+    @include breakpoint(laptop) {
+        padding-top: 120px;
+    }
 }

@@ -14,13 +14,16 @@
             <!-- partial:partials/_header.html --><!-- partial -->
             <main>
                 <div class="container container--inner">
-                    <div class="notary-intro">
+                    <section class="notary-intro">
                         <div class="notary-intro__image-column">
-                            <img src="img/notary-intro-photo.jpg" alt="Фото вводного блока" class="notary-intro__image" />
+                            <picture>
+                                <source srcset="img/notary-intro-photo-tablet.jpg" media="(max-width: 1200px)">
+                                <img src="img/notary-intro-photo.jpg" alt="Фото вводного блока" class="notary-intro__image">
+                            </picture>
                         </div>
                         <div class="notary-intro__text-column">
                             <h1 class="notary-intro__main-heading">
-                                Нотариальные услуги для <em>физических</em> и <em>юридических</em>
+                                Нотариальные услуги для <a href="#">физических</a> и <a href="#">юридических</a>
                                 лиц в Москве
                             </h1>
                             <p class="notary-intro__paragraph">
@@ -31,8 +34,8 @@
                                 О нотариусе
                             </a>
                         </div>
-                    </div>
-                    <div class="notary-actions">
+                    </section>
+                    <section class="notary-actions">
                         <h2 class="notary-actions__heading">
                             Нотариальные действия
                         </h2>
@@ -148,15 +151,15 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="home-news">
+                    </section>
+                    <section class="home-news">
                         <div class="home-news__top-row">
                             <h2 class="home-news__heading">
                                 Новости
                             </h2>
                             <a href="#" class="home-news__all-news-link">Все новости</a>
                         </div>
-                        
+
                         <ul class="home-news__list">
                             <li class="home-news__list-item">
                                 <a href="#" class="home-news__card">
@@ -246,7 +249,104 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </section>
+                    <section class="contact-us">
+                        <div class="contact-us__text-block">
+                            <h2 class="contact-us__heading">
+                                Нужна консультация?<br> Свяжитесь с нами!
+                            </h2>
+                            <p class="contact-us__paragraph">
+                                Мы с радостью ответим на ваши вопросы, рассчитаем стоимость совершения нотариального действия и подготовим необходимые документы
+                            </p>
+                        </div>
+                        <div class="contact-us__form-block">
+                            <form action="/" method="GET" class="contact-us__form" data-parsley-validate>
+                                <div class="contact-us__form-column contact-us__form-column--fullwidth">
+                                    <input type="text" name="name" class="contact-us__form-input" placeholder="ФИО *" required />
+                                </div>
+                                <div class="contact-us__form-column">
+                                    <input type="text" name="phone" class="contact-us__form-input js-phone-input" placeholder="Телефон *" data-parsley-phone required />
+                                </div>
+                                <div class="contact-us__form-column">
+                                    <input type="email" name="email" class="contact-us__form-input" placeholder="E-mail" required />
+                                </div>
+                                <div class="contact-us__form-column contact-us__form-column--fullwidth">
+                                    <textarea name="text" class="contact-us__form-textarea" placeholder="Текст сообщения *" required></textarea>
+                                </div>
+                                <div class="contact-us__form-submit-column">
+                                    <p class="contact-us__form-user-policy">Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с <a href="#">Правилами обработки персональных данных</a></p>
+                                    <button class="contact-us__form-submit-btn">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <section class="public-registers js-public-registers">
+                        <div class="public-registers__row">
+                            <h2 class="public-registers__heading">
+                                Публичные реестры
+                            </h2>
+                            <div class="public-registers__slider-arrows">
+                                <a href="#" role="button" class="public-registers__slider-arrow js-public-registers-prev-btn">
+                                    <svg width="16" height="22" aria-hidden="true" class="icon-arrow-left">
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" role="button" class="public-registers__slider-arrow js-public-registers-next-btn">
+                                    <svg width="16" height="22" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="public-registers__slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="public-registers__slider-card">
+                                            <span class="public-registers__slider-card-title">
+                                                Сервис проверки доверенностей
+                                            </span>
+                                            <svg width="22" height="22" aria-hidden="true" class="icon-link">
+                                                <use xlink:href="#link"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="public-registers__slider-card">
+                                            <span class="public-registers__slider-card-title">
+                                                Реестр уведомлений о залоге движимого имущества
+                                            </span>
+                                            <svg width="22" height="22" aria-hidden="true" class="icon-link">
+                                                <use xlink:href="#link"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="public-registers__slider-card">
+                                            <span class="public-registers__slider-card-title">
+                                                Реестр наследственных дел
+                                            </span>
+                                            <svg width="22" height="22" aria-hidden="true" class="icon-link">
+                                                <use xlink:href="#link"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="public-registers__slider-card">
+                                            <span class="public-registers__slider-card-title">
+                                                Договоры ивенстиционного товарищества
+                                            </span>
+                                            <svg width="22" height="22" aria-hidden="true" class="icon-link">
+                                                <use xlink:href="#link"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
             <!-- partial:partials/_footer.html --><!-- partial -->

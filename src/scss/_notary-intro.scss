@@ -1,32 +1,47 @@
 .notary-intro {
     display: flex;
     align-items: center;
+    @include breakpoint(laptop) {
+        flex-direction: column;
+    }
 }
-
-
 
 .notary-intro__image-column {
     width: 720px;
     flex-shrink: 0;
-    background-color: $orange;
     margin-left: -290px;
+    @include breakpoint(laptop) {
+        margin: 0;
+        width: 100%;
+    }
 }
-
 
 .notary-intro__text-column {
     width: 50%;
     flex-grow: 1;
     padding-left: 115px;
-   
+    @include breakpoint(laptop) {
+        padding: 0;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
 }
-
-
 
 .notary-intro__image {
     width: 100%;
     max-width: none;
     height: auto;
     display: block;
+    @include breakpoint(laptop) {
+        margin-left: -1 * 40px;
+        width: calc(100% + (40px * 2));
+    }
+
+    @include breakpoint(small-mobile) {
+        margin-left: -1 * 20px;
+        width: calc(100% + (20px * 2));
+    }
 }
 
 .notary-intro__main-heading {
@@ -34,37 +49,45 @@
     line-height: 1.2;
     font-family: $spectral;
     font-weight: 500;
-   
-
-    em {
+    @include breakpoint(laptop) {
+        font-size: 32px;
+      
+    }
+    a {
         font-style: normal;
         color: $orange;
         position: relative;
         display: inline-block;
         vertical-align: baseline;
+        &:link,
+        &:visited {
+            color: $orange;
+        }
         &::before {
             content: '';
             height: 1px;
             width: 100%;
             position: absolute;
-           
             left: 0%;
             bottom: 10px;
             background-color: $orange;
+            @include breakpoint(laptop) {
+                bottom: 5px;
+            }
         }
     }
 }
-
-
 
 .notary-intro__paragraph {
     font-size: 16px;
     line-height: 1.5;
     color: $light-text;
     margin-top: 30px;
+    @include breakpoint(laptop) {
+        font-size: 14px;
+        margin-top: 20px;
+    }
 }
-
-
 
 .notary-intro__about-notary {
     font-size: 16px;
@@ -75,4 +98,7 @@
     display: inline-block;
     border-radius: 50px;
     margin-top: 40px;
+    @include breakpoint(laptop) {
+        margin-top: 18px;
+    }
 }
