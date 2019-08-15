@@ -8,6 +8,10 @@
         padding-top: 45px;
         padding-bottom: 60px;
     }
+    @include breakpoint(mobile) {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
     &::before {
         content: '';
         pointer-events: none;
@@ -42,6 +46,9 @@
     @include breakpoint(laptop) {
         margin: -10px;
     }
+    @include breakpoint(mobile) {
+        margin: -5px;
+    }
 }
 
 
@@ -54,6 +61,10 @@
     @include breakpoint(laptop) {
         width: 50%;
         padding: 10px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 5px;
     }
 }
 

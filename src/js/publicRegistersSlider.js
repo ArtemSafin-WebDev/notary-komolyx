@@ -20,7 +20,7 @@ export default function() {
         breakpoints: {
             768: {
                 slidesPerView: 'auto',
-                spaceBetween: 20
+                spaceBetween: 10
             },
             1200: {
                 slidesPerView: 3,

@@ -31,8 +31,76 @@
                             Контакты
                         </h1>
                     </section>
+
                     <section class="contacts">
-                        
+                        <p class="contacts__address">
+                            Россия, Москва,<br />
+                            Ленинградский проспект, д. 15, стр. 28<br />
+                            <a href="https://yandex.ru/maps/213/moscow/?from=api-maps&ll=37.570464%2C55.781510&mode=routes&origin=jsapi_2_1_74&rtext=~55.781510%2C37.570464&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.570%252C55.782%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D0%259B%25D0%25B5%25D0%25BD%25D0%25B8%25D0%25BD%25D0%25B3%25D1%2580%25D0%25B0%25D0%25B4%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9%2520%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581%25D0%25BF%25D0%25B5%25D0%25BA%25D1%2582%252C%252015%25D1%258128&z=17">Проложить маршрут</a>
+                        </p>
+                        <ul class="contacts__list">
+                            <li class="contacts__list-item">
+                                <h4 class="contacts__type-heading">
+                                    Телефон
+                                </h4>
+                                <a href="tel:+74956020695" class="contacts__contact-block">Тел: +7 (495) 602-06-95</a>
+                                <a href="tel:+79686831168" class="contacts__contact-block">Моб: +7 (968) 683-11-68</a>
+                            </li>
+                            <li class="contacts__list-item">
+                                <h4 class="contacts__type-heading">
+                                    E-mail
+                                </h4>
+                                <a href="mailto:notary-komolykh@mail.ru" class="contacts__contact-block contacts__contact-block--email">notary-komolykh@mail.ru</a>
+                            </li>
+                            <li class="contacts__list-item">
+                                <h4 class="contacts__type-heading">
+                                    Режим работы
+                                </h4>
+                                <p class="contacts__contact-block">
+                                    Пн-пт 9:00 — 18:00 (обед 12:00 — 13:00)<br />
+                                    Сб 10:00 — 17:00 (обед 12:00 — 13:00)<br />
+                                    Вс выходной
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="contacts__map-container">
+                            
+                            <div class="contacts__map" id="map" data-coords="55.78150956895344, 37.57046449999994" data-pin="img/pin.svg"></div>
+                        </div>
+                    </section>
+
+                    <section class="contact-us">
+                        <div class="contact-us__text-block">
+                            <h2 class="contact-us__heading">
+                                Нужна консультация?<br />
+                                Свяжитесь с нами!
+                            </h2>
+                            <p class="contact-us__paragraph">
+                                Мы с радостью ответим на ваши вопросы, рассчитаем стоимость совершения нотариального действия и подготовим необходимые документы
+                            </p>
+                        </div>
+                        <div class="contact-us__form-block">
+                            <form action="/" method="GET" class="contact-us__form" data-parsley-validate>
+                                <div class="contact-us__form-column contact-us__form-column--fullwidth">
+                                    <input type="text" name="name" class="contact-us__form-input" placeholder="ФИО *" required />
+                                </div>
+                                <div class="contact-us__form-column">
+                                    <input type="text" name="phone" class="contact-us__form-input js-phone-input" placeholder="Телефон *" data-parsley-phone required />
+                                </div>
+                                <div class="contact-us__form-column">
+                                    <input type="email" name="email" class="contact-us__form-input" placeholder="E-mail" required />
+                                </div>
+                                <div class="contact-us__form-column contact-us__form-column--fullwidth">
+                                    <textarea name="text" class="contact-us__form-textarea" placeholder="Текст сообщения *" required></textarea>
+                                </div>
+                                <div class="contact-us__form-submit-column">
+                                    <p class="contact-us__form-user-policy">Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с <a href="#">Правилами обработки персональных данных</a></p>
+                                    <button class="contact-us__form-submit-btn">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </section>
                 </div>
             </main>

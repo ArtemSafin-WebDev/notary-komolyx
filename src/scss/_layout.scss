@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 0 $desktop-content-padding;
 
-    @include breakpoint(small-mobile) {
+    @include breakpoint(tablet) {
         max-width: none;
         padding: 0 $mobile-content-padding;
     }

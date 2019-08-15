@@ -5,6 +5,9 @@ import objectFitImages from 'object-fit-images';
 import detectIt from 'detect-it';
 import publicRegistersSlider from './publicRegistersSlider';
 import forms from './forms';
+import burgerMenu from './burgerMenu';
+import map from './map';
+import tabs from './tabs';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -30,4 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Валидация форм и маски ввода
 
     forms();
+
+    // Бургер меню
+
+    burgerMenu();
+
+    // Карта
+
+    map();
+
+    // Табы
+
+    tabs();
 });

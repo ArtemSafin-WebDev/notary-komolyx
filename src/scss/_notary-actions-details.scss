@@ -1,0 +1,67 @@
+.notary-actions-details {
+    padding-top: 130px;
+    padding-bottom: 100px;
+}
+
+
+.notary-actions-details__tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.notary-actions-details__tabs-navigation {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+
+.notary-actions-details__tab-button {
+    color: $blue-text;
+    font-family: $spectral;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-right: 30px;
+    position: relative;
+    transition: color .2s;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:link,
+    &:visited {
+        color: $blue-text;
+    }
+
+    &.active {
+        color: $orange;
+    }
+}
+
+
+.notary-actions-details__tabs-list {
+    position: relative;
+}
+
+
+
+.notary-actions-details__tab-item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+    }
+}

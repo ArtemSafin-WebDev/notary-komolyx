@@ -1,0 +1,144 @@
+.burger-menu {
+    margin: 0 auto;
+    @include breakpoint(desktop) {
+        margin: 0;
+        margin-left: 20px;
+    }
+    @include breakpoint(small-tablet) {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        top: 120px;
+        width: 100%;
+        height: calc(100% - 120px);
+        background-color: #fff;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 $mobile-content-padding;
+        padding-bottom: 50px;
+        border-top: 1px solid #edeae3;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+        z-index: 200;
+        opacity: 0;
+        visibility: hidden;
+        &.shown {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+.burger-menu__address-and-regime {
+    margin-top: 20px;
+    display: none;
+    @include breakpoint(small-tablet) {
+        display: block;
+    }
+}
+
+.burger-menu__address-and-regime-section {
+    display: flex;
+    align-items: flex-start;
+    color: $light-text;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    svg {
+        fill: $light-text;
+    }
+}
+
+.burger-menu__address-and-regime-icon-container {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    margin-bottom: -2px;
+}
+
+.burger-menu__contact-links {
+    margin-top: 15px;
+    display: none;
+    @include breakpoint(small-tablet) {
+        display: block;
+    }
+}
+
+.burger-menu__phone-link {
+    color: $blue-text;
+    font-family: $spectral;
+    font-weight: 500;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 3px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:link,
+    &:visited {
+        color: $blue-text;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: underline;
+    }
+}
+
+
+.burger__email-link {
+    color: $light-text;
+    font-size: 14px;
+    line-height: 1.5;
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+    &::after {
+        content: '';
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        margin-top: 2px;
+        background-color: $light-text;
+        position: absolute;
+    }
+}
+
+
+
+.burger-menu__apply-link {
+    background-color: $orange;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 22px 38px;
+    align-self: flex-start;
+    display: none;
+    margin-top: 50px;
+    @include breakpoint(small-tablet) {
+        display: inline-block;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: $orange-hover;
+    }
+
+    .no-touch &:active {
+        background-color: $orange-active;
+    }
+}

@@ -1,20 +1,23 @@
 .main-nav {
-    margin: 0 auto;
-    @include breakpoint(desktop) {
-        margin: 0;
-        margin-left: 20px;
-    }
-    @include breakpoint(laptop) {
-        display: none;
+    @include breakpoint(small-tablet) {
+        margin-top: 40px;
     }
 }
 
 .main-nav__list {
     display: flex;
     align-items: center;
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
-
+.main-nav__list-item {
+    @include breakpoint(small-tablet) {
+        margin-bottom: 15px;
+    }
+}
 
 .main-nav__link {
     color: $blue-text;
@@ -23,7 +26,16 @@
     display: block;
     transition: color 0.2s;
     position: relative;
-
+    @include breakpoint(laptop) {
+        padding: 3px 10px;
+        font-size: 14px;
+    }
+    @include breakpoint(small-tablet) {
+        padding: 0;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
     .main-nav__list-item.active & {
         cursor: default;
         pointer-events: none;
@@ -39,6 +51,9 @@
             background-color: $orange;
             border-radius: 50%;
             margin-top: 5px;
+            @include breakpoint(small-tablet) {
+                display: none;
+            }
         }
     }
 

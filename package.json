@@ -17,7 +17,8 @@
     "not dead"
   ],
   "dependencies": {
-    "body-scroll-lock": "^2.6.1",
+    "@ungap/url-search-params": "^0.1.2",
+    "body-scroll-lock": "^2.6.4",
     "classlist-polyfill": "^1.2.0",
     "core-js": "^3.1.4",
     "detect-it": "^3.0.5",
@@ -27,6 +28,7 @@
     "moment": "^2.24.0",
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.9.1",
+    "query-string": "^6.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "regenerator-runtime": "^0.13.2",

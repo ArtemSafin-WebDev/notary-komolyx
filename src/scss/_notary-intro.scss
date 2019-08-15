@@ -26,6 +26,10 @@
         padding-top: 40px;
         padding-bottom: 60px;
     }
+    @include breakpoint(mobile) {
+        padding-top: 15px;
+        padding-bottom: 50px;
+    }
 }
 
 .notary-intro__image {
@@ -51,7 +55,9 @@
     font-weight: 500;
     @include breakpoint(laptop) {
         font-size: 32px;
-      
+    }
+    @include breakpoint(mobile) {
+
     }
     a {
         font-style: normal;
@@ -87,6 +93,9 @@
         font-size: 14px;
         margin-top: 20px;
     }
+    @include breakpoint(mobile) {
+        margin-top: 10px;
+    }
 }
 
 .notary-intro__about-notary {
@@ -100,5 +109,9 @@
     margin-top: 40px;
     @include breakpoint(laptop) {
         margin-top: 18px;
+    }
+    @include breakpoint(mobile) {
+        font-size: 16px;
+        margin-top: 20px;
     }
 }

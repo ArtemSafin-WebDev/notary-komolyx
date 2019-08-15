@@ -7,6 +7,10 @@
         padding-top: 45px;
         padding-bottom: 60px;
     }
+    @include breakpoint(mobile) {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
     &::before {
         content: '';
         pointer-events: none;
@@ -55,6 +59,9 @@
     display: flex;
     align-items: baseline;
     margin-bottom: 30px;
+    @include breakpoint(mobile) {
+        margin-bottom: 20px;
+    }
 }
 
 .home-news__list {
@@ -63,6 +70,9 @@
     margin: -12px;
     @include breakpoint(laptop) {
         margin: -10px;
+    }
+    @include breakpoint(mobile) {
+        margin: -5px;
     }
 }
 
@@ -77,6 +87,7 @@
     }
     @include breakpoint(mobile) {
         width: 100%;
+        padding: 5px;
     }
 }
 
@@ -93,8 +104,11 @@
     @include breakpoint(laptop) {
         padding: 20px;
         padding-top: 25px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         min-height: 210px;
+    }
+    @include breakpoint(mobile) {
+        min-height: 240px;
     }
     .no-touch &:hover,
     .touch &:active {
