@@ -1,0 +1,105 @@
+.notary-actions-details-single {
+    padding-top: 130px;
+    padding-bottom: 100px;
+    @include breakpoint(laptop) {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    @include breakpoint(mobile) {
+        padding-top: 80px;
+    }
+}
+
+
+.notary-actions-details-single__content {
+    h2 {
+        font-family: $spectral;
+        font-weight: 500;
+        color: $blue-text;
+        line-height: 1.2;
+        font-size: 36px;
+        margin-bottom: 45px;
+        @include breakpoint(laptop) {
+            font-size: 30px;
+        }
+        @include breakpoint(mobile) {
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+    }
+
+    h3 {
+        color: $blue-text;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        margin-top: 45px;
+        @include breakpoint(mobile) {
+            margin-top: 30px;
+        }
+    }
+
+    p {
+        color: $light-text;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+
+    ul {
+        li {
+            color: $light-text;
+            font-size: 16px;
+            line-height: 1.5;
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &::before {
+                content: '';
+                height: 5px;
+                width: 5px;
+                background-color: $orange;
+                position: absolute;
+                left: 0;
+                top: 11px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+.notary-actions-details-single__apply-btn {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px 38px;
+    background-color: $orange;
+    border-radius: 50px;
+    transition: background-color .2s;
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 60px;
+    @include breakpoint(mobile) {
+        margin-top: 40px;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: $orange-hover;
+    }
+
+    .no-touch &:active {
+        background-color: $orange-active;
+    }
+}

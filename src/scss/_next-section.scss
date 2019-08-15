@@ -1,6 +1,6 @@
 .next-section {
     position: relative;
-    min-height: 272px;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,10 +8,10 @@
     text-align: center;
     z-index: 1;
     @include breakpoint(laptop) {
-        min-height: 190px;
+        padding: 50px 0;
     }
     @include breakpoint(mobile) {
-        min-height: 134px;
+        padding: 38px 0;
     }
     &::before {
         content: '';

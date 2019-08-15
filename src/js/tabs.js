@@ -10,17 +10,16 @@ export default function() {
         let activeTabIndex;
 
         if (!tabButtons.legth === 0 || tabItems.length === 0) {
-            console.log('Отсутвуют кнопки или табы');
+            console.error('Отсутвуют кнопки или табы');
             return;
         } else if (tabButtons.length !== tabItems.length) {
-            console.log('Количество элементов управления не равно количеству табов');
+            console.error('Количество элементов управления не равно количеству табов');
             return;
         }
 
         const parsedQueryString = queryString.parseUrl(window.location.search).query;
 
         if ('tabname' in parsedQueryString) {
-            console.log('Имеется свойство табайтем');
             activeTabIndex = tabItems.findIndex(element => {
                 if (element.hasAttribute('data-tabname') && element.getAttribute('data-tabname').toLowerCase() === parsedQueryString.tabname.toLowerCase()) {
                     return true;
@@ -29,7 +28,6 @@ export default function() {
                 }
             });
         } else {
-            console.log('Не имеется свойства табайтем');
             activeTabIndex = tabButtons.findIndex(element => {
                 return element.classList.contains('active');
             });
