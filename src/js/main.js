@@ -8,6 +8,9 @@ import forms from './forms';
 import burgerMenu from './burgerMenu';
 import map from './map';
 import tabs from './tabs';
+import newsSlider from './newsSlider';
+import tableAccordeons from './tableAccordeons';
+import selects from './selects';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -30,10 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     publicRegistersSlider();
 
-    // Валидация форм и маски ввода
-
-    forms();
-
     // Бургер меню
 
     burgerMenu();
@@ -45,4 +44,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Табы
 
     tabs();
+
+    // Слайдер новостей
+
+    newsSlider();
+
+    // Аккордеоны таблиц
+
+    tableAccordeons();
+
+    // Селекты
+
+    selects();
+
+    // Валидация форм и маски ввода
+
+    forms();
 });

@@ -1,4 +1,4 @@
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 export default function() {
     const burgerBtn = document.querySelector('.js-burger-btn');
@@ -23,7 +23,7 @@ export default function() {
         } else {
             burgerBtn.classList.remove('active');
             burgerMenu.classList.remove('shown');
-            clearAllBodyScrollLocks();
+            enableBodyScroll(burgerMenu);
             scrollLocked = false;
             menuOpen = false;
         }
@@ -41,7 +41,7 @@ export default function() {
             disableBodyScroll(burgerMenu);
             scrollLocked = true;
         } else if (!mq.matches && menuOpen && scrollLocked) {
-            clearAllBodyScrollLocks();
+            enableBodyScroll(burgerMenu);
             scrollLocked = false;
         }
     }

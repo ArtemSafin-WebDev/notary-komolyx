@@ -1,0 +1,68 @@
+<div class="modals">
+    <div class="modals__modal-window" id="apply-modal">
+        <div class="modals__modal-window-content">
+            <a href="#" class="modal__modal-window-close-btn">
+                <svg width="16" height="16" aria-hidden="true" class="icon-cross-modal">
+                    <use xlink:href="#cross-modal" />
+                </svg>
+            </a>
+            <h2 class="modals__modal-window-heading">
+                Запись на приём
+            </h2>
+            <p class="modals__modal-window-paragraph">
+                Заполните все поля, чтобы оставить заявку на приём к нотариусу
+            </p>
+
+            <div class="modals__modal-window-form-block">
+                <form action="/" method="GET" class="modals__modal-window-form">
+                    <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                        <div class="modals__modal-window-select-block js-select-block">
+                            <select name="notary-action" class="modals__modal-window-native-select" data-parsley-no-focus required>
+                                <option value="" disabled hidden selected placeholder>Выберите тип лица *</option>
+                                <option value="citizen">Физическое</option>
+                                <option value="company">Юридическое</option>    
+                            </select>
+                            <svg width="12" height="8" aria-hidden="true" class="modals__modal-window-native-select-icon icon-arrow-down">
+                                <use xlink:href="#arrow-down" />
+                            </svg>
+                        </div>
+                        <div class="modals__modal-window-select-error-container">
+
+                        </div>
+                    </div>
+                    <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                        <div class="modals__modal-window-select-block js-select-block">
+                            <select name="notary-action" class="modals__modal-window-native-select" data-parsley-no-focus required>
+                                <option value="" disabled hidden selected placeholder>Выберите нотариальное действие *</option>
+                                <option value="doverennost">Доверенность</option>
+                                <option value="zaveshaniye">Завещание</option>
+                                <option value="zaverenie">Заверение</option>
+                            </select>
+                            <svg width="12" height="8" aria-hidden="true" class="modals__modal-window-native-select-icon icon-arrow-down">
+                                <use xlink:href="#arrow-down" />
+                            </svg>
+                        </div>
+                        <div class="modals__modal-window-select-error-container">
+                            
+                        </div>
+                    </div>
+                    <div class="modals__modal-window-form-column">
+                        <input type="text" name="phone" class="modals__modal-window-form-input js-phone-input" placeholder="Телефон *" data-parsley-phone required />
+                    </div>
+                    <div class="modals__modal-window-form-column">
+                        <input type="email" name="email" class="modals__modal-window-form-input" placeholder="E-mail" required />
+                    </div>
+                    <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                        <textarea name="text" class="modals__modal-window-form-textarea" placeholder="Текст сообщения *" required></textarea>
+                    </div>
+                    <div class="modals__modal-window-form-submit-column">
+                        <p class="modals__modal-window-form-user-policy">Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с <a href="#">Правилами обработки персональных данных</a></p>
+                        <button class="modals__modal-window-form-submit-btn">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

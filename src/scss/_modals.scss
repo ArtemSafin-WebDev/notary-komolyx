@@ -1,0 +1,367 @@
+.modals {
+}
+
+.modals__modal-window {
+    background-color: rgba($blue-text, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+}
+
+.modals__modal-window-content {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 50px;
+    padding-top: 65px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal__modal-window-close-btn {
+    margin-left: auto;
+    fill: $blue-text;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modals__modal-window-heading {
+    font-size: 42px;
+    line-height: 1.2;
+    font-family: $spectral;
+    font-weight: 500;
+}
+
+.modals__modal-window-paragraph {
+    color: $light-text;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.modals__modal-window-form-block {
+    margin-top: 45px;
+}
+
+.modals__modal-window-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+    @include breakpoint(laptop) {
+        margin: -10px;
+    }
+    @include breakpoint(mobile) {
+        margin: -5px;
+    }
+}
+
+.modals__modal-window-form-column {
+    padding: 12px;
+    width: 50%;
+    &--fullwidth {
+        width: 100%;
+    }
+    @include breakpoint(laptop) {
+        padding: 10px;
+    }
+    @include breakpoint(mobile) {
+        padding: 5px;
+        width: 100%;
+    }
+}
+
+.parsley-errors-list {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #ff391e;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.modals__modal-window-form-input,
+.modals__modal-window-form-textarea {
+    background-color: #e7e3da;
+    border: 1px solid #e7e3da;
+    font: inherit;
+    color: $blue-text;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 20px 20px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: #b4aea4;
+    }
+
+    
+
+    &:focus {
+        border-color: #b4aea4;
+    }
+
+    &.parsley-error {
+        border-color: #ff391e;
+        .no-touch &:hover,
+        .touch &:active {
+            border-color: #ff391e;
+        }
+
+        &:focus {
+            border-color: #ff391e;
+        }
+    }
+
+    @include placeholder {
+        font: inherit;
+        color: $light-text;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+}
+
+.modals__modal-window-form-textarea {
+    height: 180px;
+    display: block;
+}
+
+.modals__modal-window-form-submit-column {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    @include breakpoint(laptop) {
+        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    @include breakpoint(mobile) {
+        margin-top: 5px;
+        padding: 5px;
+    }
+}
+
+.modals__modal-window-form-user-policy {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $light-text;
+    a {
+        position: relative;
+        transition: color 0.2s;
+        display: inline-block;
+        &:link,
+        &:visited {
+            color: $light-text;
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: $orange;
+            &::before {
+                background-color: $orange;
+            }
+        }
+        &::before {
+            content: '';
+            height: 1px;
+            background-color: $light-text;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            margin-top: 2px;
+            position: absolute;
+            transition: background-color 0.2s;
+        }
+    }
+}
+
+.modals__modal-window-form-submit-btn {
+    font: inherit;
+    background-color: $orange;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 22px 64px;
+    outline: none;
+    margin-left: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+    @include breakpoint(laptop) {
+        align-self: flex-start;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: $orange-hover;
+    }
+
+    .no-touch &:active {
+        background-color: $orange-active;
+    }
+}
+
+.modals__modal-window-select-block {
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    .modals__modal-window-native-select {
+        font: inherit;
+        color: $light-text;
+        font-size: 16px;
+        line-height: 1.2;
+        background-color: #e7e3da;
+        padding: 20px 20px;
+        position: relative;
+        z-index: 12;
+        display: block;
+        width: 100%;
+        height: 60px;
+        border: 1px solid #e7e3da;
+        border-radius: 10px;
+        transition: border-color 0.2s, color 0.2s;
+        cursor: pointer;
+        outline: none;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        .no-touch &:hover,
+        .touch &:active {
+            border-color: #b4aea4;
+        }
+        &:focus {
+            border-color: #b4aea4;
+            color: $blue-text;
+            ~ .modals__modal-window-native-select-icon {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        &:required:valid {
+            color: $blue-text;
+        }
+    }
+
+    .modals__modal-window-native-select-icon {
+        position: absolute;
+        right: 20px;
+        top: 28px;
+        fill: $blue-text;
+        z-index: 300;
+        transition: transform 0.2s;
+        @include breakpoint(mobile) {
+            display: block;
+        }
+    }
+
+    .choices {
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $blue-text;
+    }
+
+    .choices__inner {
+        min-height: auto;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $blue-text;
+        background-color: #e7e3da;
+        border: 1px solid #e7e3da;
+        padding: 20px 20px;
+        border-radius: 10px;
+        transition: border-color 0.2s;
+    }
+
+    &.parsley-error {
+        .modals__modal-window-native-select,
+        .choices__inner {
+            border-color: #ff391e;
+        }
+    }
+
+    .choices__placeholder {
+        color: $light-text;
+        opacity: 1;
+    }
+
+    .is-focused .choices__inner,
+    .is-open .choices__inner {
+        border-color: #b4aea4;
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 20px;
+    }
+
+    .choices__list--single {
+        padding: 0;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        width: 12px;
+        height: 12px;
+        right: 20px;
+        background-image: url("data:image/svg+xml,%0A%3Csvg fill='%231F203A' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 6'%3E%3Cpath d='M10.75.34A1 1 0 0 0 9.34.25L5.5 3.66 1.66.25a1 1 0 0 0-1.32 1.5l4.5 4a1 1 0 0 0 1.32 0l4.5-4a1 1 0 0 0 .09-1.41z' /%3E%3C/svg%3E");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: -6px;
+        transition: transform 0.2s;
+    }
+
+    .choices[data-type*='select-one'].is-open:after {
+        transform: rotate(180deg);
+    }
+
+    .choices__list--dropdown {
+        z-index: 3000;
+        margin-top: 10px;
+        border: none;
+        box-shadow: 0px 10px 30px rgba(#a39c8b, 0.5);
+        border-radius: 10px;
+        word-break: initial;
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: none;
+        padding: 18px 0;
+    }
+
+    .choices__list--dropdown .choices__item {
+        padding: 6px 20px;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $light-text;
+        transition: color 0.2s, background-color 0.2s;
+        &.choices__placeholder {
+            opacity: 0.7;
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background-color: $orange;
+        color: white;
+    }
+}

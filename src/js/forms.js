@@ -45,4 +45,28 @@ export default function() {
     });
 
     Parsley.setLocale('ru');
+
+
+    var parsleyConfig = {
+        errorsContainer: function(parsleyField) {
+            var formColumn = parsleyField.$element.closest('.modals__modal-window-form-column');
+
+            if (formColumn.length > 0) {
+                return formColumn.find('.modals__modal-window-select-error-container');
+            }
+
+            return parsleyField;
+        },
+        classHandler: function (el) {
+            var selectBlock = el.$element.closest('.modals__modal-window-select-block');
+
+            if (selectBlock.length > 0) {
+                return selectBlock;
+            }
+
+            return el;
+        },
+    };
+
+    $("form").parsley(parsleyConfig);
 }

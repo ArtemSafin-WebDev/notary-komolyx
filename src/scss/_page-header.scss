@@ -436,7 +436,7 @@
     color: $blue-text;
     flex-direction: column;
     display: none;
-    
+    -webkit-tap-highlight-color: transparent;
     @include breakpoint(small-tablet) {
         margin-left: auto;
         display: flex;

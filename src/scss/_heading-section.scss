@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 1;
+    z-index: 30;
     padding: 97px 0;
     @include breakpoint(laptop) {
         // min-height: 200px;
@@ -39,6 +39,7 @@
         bottom: 0;
         margin-left: -.5px;
         margin-bottom: -50px;
+        
         @include breakpoint(laptop) {
             height: 60px;
             margin-bottom: -30px;
@@ -70,6 +71,12 @@
 .heading-section__breadcrumbs-list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include breakpoint(mobile) {
+        margin-bottom: 8px;
+    }
+    
 }
 
 
@@ -89,6 +96,7 @@
     line-height: 1.5;
     display: flex;
     align-items: center;
+    white-space: nowrap;
     @include breakpoint(mobile) {
         font-size: 12px;
     }
@@ -109,4 +117,12 @@
     .touch &:active {
         text-decoration: underline;
     }
+}
+
+
+.heading-section__date {
+    font-size: 18px;
+    font-weight: 700;
+    color: $orange;
+    margin-top: 15px;
 }

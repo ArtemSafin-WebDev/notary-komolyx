@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="format-detection" content="telephone=no" />
         <link href="https://fonts.googleapis.com/css?family=Spectral:400,500&display=swap&subset=cyrillic" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet" />
         <link rel="stylesheet" href="css/styles.min.css" />
@@ -55,6 +56,11 @@
                         fill-rule="evenodd"
                     />
                 </symbol>
+                <symbol viewBox="0 0 16.14 16.14" id="cross-modal" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.49 8.07l6.36-6.36a1 1 0 000-1.42 1 1 0 00-1.41 0L8.07 6.66 1.71.29A1 1 0 00.29 1.71l6.37 6.36-6.37 6.36a1 1 0 101.42 1.42l6.36-6.36 6.36 6.36a1 1 0 001.42 0 1 1 0 000-1.41z"
+                    />
+                </symbol>
                 <symbol viewBox="0 0 64 64" id="execution" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M13.37 64h35.7a.92.92 0 00.92-.92V38l12.85-12.81a3 3 0 000-4.24L60 18.12a3 3 0 00-4.24 0L50 23.9V.92a.92.92 0 00-.93-.92H.92A.92.92 0 000 .92V50.4a.9.9 0 00.23.4L12.8 63.7a.94.94 0 00.42.24h.11zM48 25.9V2H2v47h12a1.06 1.06 0 011 1v12h33V40l-3.27 3.3a3 3 0 01-.94.64l-4.95 2.12a3 3 0 01-3.94-3.94l2.1-4.95a3 3 0 01.64-.94zM13 61L3 51h10zM6 13a1 1 0 011-1h36a1 1 0 010 2H7a1 1 0 01-1-1zm1 6a1 1 0 000 2h36a1 1 0 000-2zM6 40a1 1 0 011-1h19a1 1 0 010 2H7a1 1 0 01-1-1zm52.6-20.46a1 1 0 00-1.42 0L55.77 21 60 25.19l1.42-1.41a1 1 0 000-1.42zm-18.39 17l14.14-14.18 1.42 1.42-14.14 14.14zM43 39.33l14.18-14.14 1.42 1.42-14.14 14.14zm-6.3 3.58L38.85 38 43 42.11l-4.94 2.11a1 1 0 01-1.32-1.31z"
@@ -92,14 +98,14 @@
                 </symbol>
                 <symbol viewBox="0 0 15 20" id="location" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <mask id="oa" x="-2" y="-2" width="19" height="24" maskUnits="userSpaceOnUse">
+                        <mask id="pa" x="-2" y="-2" width="19" height="24" maskUnits="userSpaceOnUse">
                             <path d="M7.5 0A7.44 7.44 0 000 7.36a7 7 0 00.66 3 46.58 46.58 0 006.52 9.49.44.44 0 00.64 0 46.58 46.58 0 006.52-9.49 7 7 0 00.66-3A7.44 7.44 0 007.5 0z" fill="#fff" />
                         </mask>
                     </defs>
-                    <circle class="ocls-2" cx="7.5" cy="7.5" r="1.5" />
-                    <g mask="url(#oa)">
+                    <circle class="pcls-2" cx="7.5" cy="7.5" r="1.5" />
+                    <g mask="url(#pa)">
                         <path
-                            class="ocls-2"
+                            class="pcls-2"
                             d="M7.5 22a2.39 2.39 0 01-1.82-.83 48 48 0 01-6.84-10A9 9 0 01-2 7.36 9.44 9.44 0 017.5-2 9.44 9.44 0 0117 7.36a9 9 0 01-.84 3.85 48.33 48.33 0 01-6.84 10A2.4 2.4 0 017.5 22zm1.18-3.47zM7.5 2A5.44 5.44 0 002 7.36a5.05 5.05 0 00.47 2.16 39.37 39.37 0 005 7.61 39.68 39.68 0 005-7.61A5.05 5.05 0 0013 7.36 5.44 5.44 0 007.5 2z"
                         />
                     </g>
@@ -293,7 +299,7 @@
                             <a href="mailto:notary-komolykh@mail.ru" class="page-header__contacts-main-email-link">notary-komolykh@mail.ru</a>
                         </div>
 
-                        <a href="#" class="page-header__apply-btn">
+                        <a href="#apply-modal" class="page-header__apply-btn js-modal-btn">
                             Запись на прием
                         </a>
 
@@ -555,7 +561,7 @@
                             </p>
                         </div>
                         <div class="contact-us__form-block">
-                            <form action="/" method="GET" class="contact-us__form" data-parsley-validate>
+                            <form action="/" method="GET" class="contact-us__form">
                                 <div class="contact-us__form-column contact-us__form-column--fullwidth">
                                     <input type="text" name="name" class="contact-us__form-input" placeholder="ФИО *" required />
                                 </div>
@@ -749,6 +755,72 @@
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="js/app.js"></script>
+        </div>
+        <div class="modals">
+            <div class="modals__modal-window" id="apply-modal">
+                <div class="modals__modal-window-content">
+                    <a href="#" class="modal__modal-window-close-btn">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-cross-modal">
+                            <use xlink:href="#cross-modal" />
+                        </svg>
+                    </a>
+                    <h2 class="modals__modal-window-heading">
+                        Запись на приём
+                    </h2>
+                    <p class="modals__modal-window-paragraph">
+                        Заполните все поля, чтобы оставить заявку на приём к нотариусу
+                    </p>
+
+                    <div class="modals__modal-window-form-block">
+                        <form action="/" method="GET" class="modals__modal-window-form">
+                            <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                                <div class="modals__modal-window-select-block js-select-block">
+                                    <select name="notary-action" class="modals__modal-window-native-select" data-parsley-no-focus required>
+                                        <option value="" disabled hidden selected placeholder>Выберите тип лица *</option>
+                                        <option value="citizen">Физическое</option>
+                                        <option value="company">Юридическое</option>
+                                    </select>
+                                    <svg width="12" height="8" aria-hidden="true" class="modals__modal-window-native-select-icon icon-arrow-down">
+                                        <use xlink:href="#arrow-down" />
+                                    </svg>
+                                </div>
+                                <div class="modals__modal-window-select-error-container"></div>
+                            </div>
+                            <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                                <div class="modals__modal-window-select-block js-select-block">
+                                    <select name="notary-action" class="modals__modal-window-native-select" data-parsley-no-focus required>
+                                        <option value="" disabled hidden selected placeholder>Выберите нотариальное действие *</option>
+                                        <option value="doverennost">Доверенность</option>
+                                        <option value="zaveshaniye">Завещание</option>
+                                        <option value="zaverenie">Заверение</option>
+                                    </select>
+                                    <svg width="12" height="8" aria-hidden="true" class="modals__modal-window-native-select-icon icon-arrow-down">
+                                        <use xlink:href="#arrow-down" />
+                                    </svg>
+                                </div>
+                                <div class="modals__modal-window-select-error-container"></div>
+                            </div>
+                            <div class="modals__modal-window-form-column">
+                                <input type="text" name="phone" class="modals__modal-window-form-input js-phone-input" placeholder="Телефон *" data-parsley-phone required />
+                            </div>
+                            <div class="modals__modal-window-form-column">
+                                <input type="email" name="email" class="modals__modal-window-form-input" placeholder="E-mail" required />
+                            </div>
+                            <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                                <textarea name="text" class="modals__modal-window-form-textarea" placeholder="Текст сообщения *" required></textarea>
+                            </div>
+                            <div class="modals__modal-window-form-submit-column">
+                                <p class="modals__modal-window-form-user-policy">
+                                    Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с <a href="#">Правилами обработки персональных данных</a>
+                                </p>
+                                <button class="modals__modal-window-form-submit-btn">
+                                    Отправить
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

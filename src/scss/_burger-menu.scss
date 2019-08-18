@@ -125,6 +125,7 @@
     align-self: flex-start;
     display: none;
     margin-top: 50px;
+    -webkit-tap-highlight-color: transparent;
     @include breakpoint(small-tablet) {
         display: inline-block;
     }
