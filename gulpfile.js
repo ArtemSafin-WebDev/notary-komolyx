@@ -83,7 +83,8 @@ gulp.task('serve', function() {
   browserSync.init({
     server: 'build/',
     port: 7000,
-    ghostMode: false
+    ghostMode: false,
+    host: '192.168.1.171'
   })
   gulp.watch('./src/**/*.html', gulp.series('html'))
   gulp.watch('./src/img/icons/*svg', gulp.series('sprite', 'html'))

@@ -1,11 +1,23 @@
 import Inputmask from 'inputmask';
 import 'parsleyjs';
+import moment from 'moment';
 
 export default function() {
     const phoneNumbers = Array.from(document.querySelectorAll('.js-phone-input'));
 
     phoneNumbers.forEach(input => {
         Inputmask({ mask: '+7 (999) 999-99-99' }).mask(input);
+    });
+
+    window.Parsley.addValidator('moment', {
+        requirementType: 'string',
+        validateString: function(value) {
+            return moment(value, 'DD-MM-YYYY', true).isValid();
+        },
+        messages: {
+            en: 'Please enter a valid date in format DD-MM-YYYY.',
+            ru: 'Укажите правильную дату в формате ДД-ММ-ГГГГ'
+        }
     });
 
     window.Parsley.addValidator('phone', {
@@ -46,7 +58,6 @@ export default function() {
 
     Parsley.setLocale('ru');
 
-
     var parsleyConfig = {
         errorsContainer: function(parsleyField) {
             var formColumn = parsleyField.$element.closest('.modals__modal-window-form-column');
@@ -57,7 +68,7 @@ export default function() {
 
             return parsleyField;
         },
-        classHandler: function (el) {
+        classHandler: function(el) {
             var selectBlock = el.$element.closest('.modals__modal-window-select-block');
 
             if (selectBlock.length > 0) {
@@ -65,8 +76,8 @@ export default function() {
             }
 
             return el;
-        },
+        }
     };
 
-    $("form").parsley(parsleyConfig);
+    $('form').parsley(parsleyConfig);
 }

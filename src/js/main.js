@@ -11,6 +11,8 @@ import tabs from './tabs';
 import newsSlider from './newsSlider';
 import tableAccordeons from './tableAccordeons';
 import selects from './selects';
+import datePicker from './datePicker';
+import modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -20,7 +22,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Полифилл для CSS свойства ObjectFit (заполнение контейнера изображением)
+
     objectFitImages();
+
+
+    // Полифилл для метода element.matches();
+
+    (function() {
+        // проверяем поддержку
+        if (!Element.prototype.matches) {
+            // определяем свойство
+            Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
+        }
+    })();
+
+    // Полифилл метода element.closest();
+
+    (function(ELEMENT) {
+        ELEMENT.matches = ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
+        ELEMENT.closest =
+            ELEMENT.closest ||
+            function closest(selector) {
+                if (!this) return null;
+                if (this.matches(selector)) return this;
+                if (!this.parentElement) {
+                    return null;
+                } else return this.parentElement.closest(selector);
+            };
+    })(Element.prototype);
 
     // Определение тач устройств
 
@@ -60,4 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Валидация форм и маски ввода
 
     forms();
+
+    // Датапикер
+
+    datePicker();
+
+    // Модальные окна
+
+    modals();
 });

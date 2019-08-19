@@ -1,7 +1,7 @@
 <div class="modals">
-    <div class="modals__modal-window" id="apply-modal">
+    <div class="modals__modal-window js-modal" id="apply-modal">
         <div class="modals__modal-window-content">
-            <a href="#" class="modal__modal-window-close-btn">
+            <a href="#apply-modal" class="modal__modal-window-close-btn js-modal-close">
                 <svg width="16" height="16" aria-hidden="true" class="icon-cross-modal">
                     <use xlink:href="#cross-modal" />
                 </svg>
@@ -14,21 +14,19 @@
             </p>
 
             <div class="modals__modal-window-form-block">
-                <form action="/" method="GET" class="modals__modal-window-form">
+                <form action="/" method="POST" class="modals__modal-window-form">
                     <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
                         <div class="modals__modal-window-select-block js-select-block">
                             <select name="notary-action" class="modals__modal-window-native-select" data-parsley-no-focus required>
                                 <option value="" disabled hidden selected placeholder>Выберите тип лица *</option>
                                 <option value="citizen">Физическое</option>
-                                <option value="company">Юридическое</option>    
+                                <option value="company">Юридическое</option>
                             </select>
                             <svg width="12" height="8" aria-hidden="true" class="modals__modal-window-native-select-icon icon-arrow-down">
                                 <use xlink:href="#arrow-down" />
                             </svg>
                         </div>
-                        <div class="modals__modal-window-select-error-container">
-
-                        </div>
+                        <div class="modals__modal-window-select-error-container"></div>
                     </div>
                     <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
                         <div class="modals__modal-window-select-block js-select-block">
@@ -42,9 +40,39 @@
                                 <use xlink:href="#arrow-down" />
                             </svg>
                         </div>
-                        <div class="modals__modal-window-select-error-container">
-                            
+                        <div class="modals__modal-window-select-error-container"></div>
+                    </div>
+                    <div class="modals__modal-window-form-column">
+                        <div class="modals__modal-window-datepicker-wrapper">
+                            <input type="text" name="date" id="date" class="modals__modal-window-form-input js-date-input" placeholder="Дата приема *" autocomplete="off" readonly data-parsley-moment required tabindex="-1"/>
+                            <label for="date" class="modals__modal-window-datepicker-label">
+                                <svg width="30" height="30" aria-hidden="true" class="icon-calendar">
+                                    <use xlink:href="#calendar" />
+                                </svg>
+                            </label>
                         </div>
+                    </div>
+                    <div class="modals__modal-window-form-column">
+                        <div class="modals__modal-window-select-block js-select-block">
+                            <select name="notary-action" class="modals__modal-window-native-select" data-parsley-no-focus required>
+                                <option value="" disabled hidden selected placeholder>Время приема *</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00 (кроме субботы)</option>
+                                <option value="17:00">16:00 (кроме субботы)</option>
+                            </select>
+                            <svg width="12" height="8" aria-hidden="true" class="modals__modal-window-native-select-icon icon-arrow-down">
+                                <use xlink:href="#arrow-down" />
+                            </svg>
+                        </div>
+                        <div class="modals__modal-window-select-error-container"></div>
+                    </div>
+                    <div class="modals__modal-window-form-column modals__modal-window-form-column--fullwidth">
+                        <input type="text" name="name" class="modals__modal-window-form-input" placeholder="ФИО *" required />
                     </div>
                     <div class="modals__modal-window-form-column">
                         <input type="text" name="phone" class="modals__modal-window-form-input js-phone-input" placeholder="Телефон *" data-parsley-phone required />

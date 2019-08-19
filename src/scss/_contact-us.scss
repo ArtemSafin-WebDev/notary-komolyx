@@ -168,8 +168,8 @@
     color: $light-text;
     a {
         position: relative;
-        transition: color .2s;
-        display: inline-block;
+        transition: color 0.2s, border-color .2s;
+        border-bottom: 1px solid $light-text;
         &:link,
         &:visited {
             color: $light-text;
@@ -178,20 +178,7 @@
         .no-touch &:hover,
         .touch &:active {
             color: $orange;
-            &::before {
-                background-color: $orange;
-            }
-        }
-        &::before {
-            content: '';
-            height: 1px; 
-            background-color: $light-text;
-            width: 100%;
-            left: 0;
-            top: 100%;
-            margin-top: 2px;
-            position: absolute;
-            transition: background-color .2s;
+            border-color: $orange;
         }
     }
 }
