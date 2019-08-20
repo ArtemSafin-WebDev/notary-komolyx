@@ -197,7 +197,7 @@
         }
 
         &:focus {
-            border-color: #ff391e;
+            border-color: #b4aea4 !important;
         }
     }
 
@@ -512,15 +512,16 @@
     .pika-prev {
         margin-left: auto;
         margin-right: 20px;
-        background-image: url("data:image/svg+xml,%0A%3Csvg fill='' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M21.5 8H3.91l5.55-5.54A1 1 0 1 0 8 1L.79 8.29a1 1 0 0 0 0 1.42L8 17a1 1 0 0 0 1.42-1.42L3.91 10H21.5a1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%0A%3Csvg fill='#1F203A' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M21.5 8H3.91l5.55-5.54A1 1 0 1 0 8 1L.79 8.29a1 1 0 0 0 0 1.42L8 17a1 1 0 0 0 1.42-1.42L3.91 10H21.5a1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         @supports ((-webkit-mask-size: contain) or (mask-size: contain)) {
             background-image: none;
             background-color: $blue-text;
-            -webkit-mask-image: url("data:image/svg+xml,%0A%3Csvg fill='' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M21.5 8H3.91l5.55-5.54A1 1 0 1 0 8 1L.79 8.29a1 1 0 0 0 0 1.42L8 17a1 1 0 0 0 1.42-1.42L3.91 10H21.5a1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
-            mask-image: url("data:image/svg+xml,%0A%3Csvg fill='' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M21.5 8H3.91l5.55-5.54A1 1 0 1 0 8 1L.79 8.29a1 1 0 0 0 0 1.42L8 17a1 1 0 0 0 1.42-1.42L3.91 10H21.5a1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
+            -webkit-tap-highlight-color: transparent;
+            -webkit-mask-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M21.5 8H3.91l5.55-5.54A1 1 0 1 0 8 1L.79 8.29a1 1 0 0 0 0 1.42L8 17a1 1 0 0 0 1.42-1.42L3.91 10H21.5a1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M21.5 8H3.91l5.55-5.54A1 1 0 1 0 8 1L.79 8.29a1 1 0 0 0 0 1.42L8 17a1 1 0 0 0 1.42-1.42L3.91 10H21.5a1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
             -webkit-mask-position: center;
             mask-position: center;
             -webkit-mask-size: contain;
@@ -539,11 +540,12 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M22.21 8.29L15 1a1 1 0 0 0-1.42 1.42L19.09 8H1.5a1 1 0 0 0 0 2h17.59l-5.55 5.54A1 1 0 0 0 15 17l7.25-7.25a1 1 0 0 0-.04-1.46z'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%0A%3Csvg fill='#1F203A' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M22.21 8.29L15 1a1 1 0 0 0-1.42 1.42L19.09 8H1.5a1 1 0 0 0 0 2h17.59l-5.55 5.54A1 1 0 0 0 15 17l7.25-7.25a1 1 0 0 0-.04-1.46z'/%3E%3C/svg%3E");
 
         @supports ((-webkit-mask-size: contain) or (mask-size: contain)) {
             background-image: none;
             background-color: $blue-text;
+            -webkit-tap-highlight-color: transparent;
             -webkit-mask-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M22.21 8.29L15 1a1 1 0 0 0-1.42 1.42L19.09 8H1.5a1 1 0 0 0 0 2h17.59l-5.55 5.54A1 1 0 0 0 15 17l7.25-7.25a1 1 0 0 0-.04-1.46z'/%3E%3C/svg%3E");
             mask-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 18'%3E%3Cpath d='M22.21 8.29L15 1a1 1 0 0 0-1.42 1.42L19.09 8H1.5a1 1 0 0 0 0 2h17.59l-5.55 5.54A1 1 0 0 0 15 17l7.25-7.25a1 1 0 0 0-.04-1.46z'/%3E%3C/svg%3E");
             -webkit-mask-position: center;
@@ -654,12 +656,58 @@
     }
 }
 
-.modals__modal-window-datepicker-label {
-    position: absolute;
-    top: 16px;
-    right: 20px;
+
+
+
+
+.modals__modal-window-form-datepicker-target {
+    display: flex;
+    align-items: center;
+    background-color: #e7e3da;
+    border: 1px solid #e7e3da;
+    font: inherit;
+    color: $blue-text;
+    font-size: 16px;
+    line-height: 1.2;
+    line-height: 1;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
     cursor: pointer;
+    @include breakpoint(mobile) {
+        padding: 20px 20px;
+    }
+    &.with-placeholder {
+        color: $light-text;
+    }
+
+    &.open {
+        border-color: #b4aea4 !important;
+    }
+   
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: #b4aea4;
+    }
+
     svg {
         fill: $orange;
+        margin-left: auto;
+        @include breakpoint(mobile) {
+            width: 20px;
+            height: 20px;
+            margin-right: -5px;
+        }
+    }
+}
+
+
+.parsley-error ~ .modals__modal-window-form-datepicker-target {
+    border-color: #ff391e;
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: #ff391e;
     }
 }

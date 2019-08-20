@@ -31,6 +31,7 @@
     line-height: 1.5;
     color: $light-text;
     margin-bottom: 3px;
+    display: block;
     @include breakpoint(mobile) {
         font-size: 12px;
     }
@@ -43,24 +44,28 @@
     font-size: 42px;
     line-height: 1.2;
     position: relative;
+    transition: color .2s;
+    display: inline;
+    background-image: linear-gradient(to right, $blue-text 0%, $blue-text 100%);
+    background-position: 0 1.2em;
+    background-repeat: repeat-x;
+    background-size: 8px 1px;
     @include breakpoint(laptop) {
         font-size: 36px;
     }
     @include breakpoint(mobile) {
         font-size: 32px;
     }
-    &::after {
-        content: '';
-        bottom: 6px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $blue-text;
-        position: absolute;
-        
-    }
+    
     &:link,
     &:visited {
         color: $blue-text;
+    }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #656891;
+        background-image: linear-gradient(to right, #656891 0%, #656891 100%);
     }
 }

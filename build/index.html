@@ -208,32 +208,32 @@
                             <nav class="main-nav">
                                 <ul class="main-nav__list">
                                     <li class="main-nav__list-item active">
-                                        <a href="#" class="main-nav__link">
+                                        <a href="about-notary.html" class="main-nav__link">
                                             О нотариусе
                                         </a>
                                     </li>
                                     <li class="main-nav__list-item">
-                                        <a href="#" class="main-nav__link">
+                                        <a href="notary-actions-details.html" class="main-nav__link">
                                             Нотариальные действия
                                         </a>
                                     </li>
                                     <li class="main-nav__list-item">
-                                        <a href="#" class="main-nav__link">
+                                        <a href="tariffs.html" class="main-nav__link">
                                             Тарифы
                                         </a>
                                     </li>
                                     <li class="main-nav__list-item">
-                                        <a href="#" class="main-nav__link">
+                                        <a href="faq.html" class="main-nav__link">
                                             Вопрос-ответ
                                         </a>
                                     </li>
                                     <li class="main-nav__list-item">
-                                        <a href="#" class="main-nav__link">
+                                        <a href="news-page.html" class="main-nav__link">
                                             Новости
                                         </a>
                                     </li>
                                     <li class="main-nav__list-item">
-                                        <a href="#" class="main-nav__link">
+                                        <a href="contacts.html" class="main-nav__link">
                                             Контакты
                                         </a>
                                     </li>
@@ -708,7 +708,7 @@
                                     <a href="#" class="page-footer__secondary-nav-link">Контакты</a>
                                 </li>
                             </ul>
-                            <a href="#" class="page-footer__apply-btn page-footer__apply-btn--second">
+                            <a href="#apply-modal" class="page-footer__apply-btn page-footer__apply-btn--second js-modal-open">
                                 Запись на прием
                             </a>
                         </div>
@@ -809,16 +809,19 @@
                                         class="modals__modal-window-form-input js-date-input"
                                         placeholder="Дата приема *"
                                         autocomplete="off"
-                                        readonly
-                                        data-parsley-moment
+                                        hidden
                                         required
-                                        tabindex="-1"
+                                        data-parsley-errors-container="#datepicker-errors"
                                     />
-                                    <label for="date" class="modals__modal-window-datepicker-label">
+                                    <div class="modals__modal-window-form-datepicker-target with-placeholder js-date-target" tabindex="0">
+                                        <span class="modals__modal-window-form-datepicker-target-text">
+                                            Дата приема *
+                                        </span>
                                         <svg width="30" height="30" aria-hidden="true" class="icon-calendar">
                                             <use xlink:href="#calendar" />
                                         </svg>
-                                    </label>
+                                    </div>
+                                    <div class="modals__modal-window-form-datepicker-error-container" id="datepicker-errors"></div>
                                 </div>
                             </div>
                             <div class="modals__modal-window-form-column">

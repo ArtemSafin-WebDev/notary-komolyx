@@ -1,0 +1,61 @@
+.about-notary {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    display: flex;
+    @include breakpoint(laptop) {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    @include breakpoint(mobile) {
+        padding-top: 60px;
+        flex-direction: column;
+    }
+}
+
+
+.about-notary__image-container {
+    width: 430px;
+    margin-right: 115px;
+    @include breakpoint(laptop) {
+        width: 300px;
+        margin-right: 80px;
+    }
+    @include breakpoint(small-tablet) {
+        width: 250px;
+        margin-right: 70px;
+    }
+    @include breakpoint(mobile) {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
+
+
+.about-notary__image {
+    width: 100%;
+    height: auto;
+}
+
+
+.about-notary__content {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+    h2 {
+        margin-bottom: 5px;
+        @include breakpoint(mobile) {
+            margin-bottom: 10px;
+        }
+    }
+
+    h3 {
+        margin-bottom: 15px;
+        margin-top: 30px;
+       
+    }
+}
+
+

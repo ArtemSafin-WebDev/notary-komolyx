@@ -1,6 +1,6 @@
 import Inputmask from 'inputmask';
 import 'parsleyjs';
-import moment from 'moment';
+// import moment from 'moment';
 
 export default function() {
     const phoneNumbers = Array.from(document.querySelectorAll('.js-phone-input'));
@@ -9,16 +9,16 @@ export default function() {
         Inputmask({ mask: '+7 (999) 999-99-99' }).mask(input);
     });
 
-    window.Parsley.addValidator('moment', {
-        requirementType: 'string',
-        validateString: function(value) {
-            return moment(value, 'DD-MM-YYYY', true).isValid();
-        },
-        messages: {
-            en: 'Please enter a valid date in format DD-MM-YYYY.',
-            ru: 'Укажите правильную дату в формате ДД-ММ-ГГГГ'
-        }
-    });
+    // window.Parsley.addValidator('moment', {
+    //     requirementType: 'string',
+    //     validateString: function(value) {
+    //         return moment(value, 'DD-MM-YYYY', true).isValid();
+    //     },
+    //     messages: {
+    //         en: 'Please enter a valid date in format DD-MM-YYYY.',
+    //         ru: 'Укажите правильную дату в формате ДД-ММ-ГГГГ'
+    //     }
+    // });
 
     window.Parsley.addValidator('phone', {
         requirementType: 'string',

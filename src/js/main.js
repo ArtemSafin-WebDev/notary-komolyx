@@ -13,6 +13,7 @@ import tableAccordeons from './tableAccordeons';
 import selects from './selects';
 import datePicker from './datePicker';
 import modals from './modals';
+import faqAccordeons from './faqAccordeons';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -24,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Полифилл для CSS свойства ObjectFit (заполнение контейнера изображением)
 
     objectFitImages();
-
 
     // Полифилл для метода element.matches();
 
@@ -50,6 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else return this.parentElement.closest(selector);
             };
     })(Element.prototype);
+
+    // Полифилл для кастомных событий
+
+    (function() {
+        if (typeof window.CustomEvent === 'function') return false;
+
+        function CustomEvent(event, params) {
+            params = params || { bubbles: false, cancelable: false, detail: null };
+            var evt = document.createEvent('CustomEvent');
+            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+            return evt;
+        }
+
+        window.CustomEvent = CustomEvent;
+    })();
 
     // Определение тач устройств
 
@@ -97,4 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Модальные окна
 
     modals();
+
+    // Аккордеоны Вопрос-ответ
+
+    faqAccordeons();
 });

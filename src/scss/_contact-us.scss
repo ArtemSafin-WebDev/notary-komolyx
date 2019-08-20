@@ -116,14 +116,25 @@
     .touch &:active {
         border-color: #B4AEA4;
     }
+   
 
     &.parsley-error {
         border-color: #FF391E;
+        .no-touch &:hover,
+        .touch &:active {
+            border-color: #FF391E;
+        }
+
+        &:focus {
+            border-color: #B4AEA4 !important;
+        }
     }
 
     &:focus {
         border-color: #B4AEA4;
     }
+
+   
 
     
 

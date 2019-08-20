@@ -44,12 +44,23 @@
                     </div>
                     <div class="modals__modal-window-form-column">
                         <div class="modals__modal-window-datepicker-wrapper">
-                            <input type="text" name="date" id="date" class="modals__modal-window-form-input js-date-input" placeholder="Дата приема *" autocomplete="off" readonly data-parsley-moment required tabindex="-1"/>
-                            <label for="date" class="modals__modal-window-datepicker-label">
+                           
+                            <input type="text" name="date" id="date" class="modals__modal-window-form-input js-date-input" placeholder="Дата приема *" autocomplete="off" hidden required data-parsley-errors-container="#datepicker-errors"/>
+                            <div class="modals__modal-window-form-datepicker-target with-placeholder js-date-target" tabindex="0">
+                                <span class="modals__modal-window-form-datepicker-target-text">
+                                    Дата приема *
+                                </span>
                                 <svg width="30" height="30" aria-hidden="true" class="icon-calendar">
                                     <use xlink:href="#calendar" />
                                 </svg>
-                            </label>
+                            </div>
+                            <div class="modals__modal-window-form-datepicker-error-container" id="datepicker-errors">
+
+                            </div>
+
+                           
+
+
                         </div>
                     </div>
                     <div class="modals__modal-window-form-column">
