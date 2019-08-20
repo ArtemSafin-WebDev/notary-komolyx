@@ -244,9 +244,10 @@
     border-radius: 50px;
     transition: background-color .2s;
     white-space: nowrap;
-    @include breakpoint(large-desktop) {
+    @include breakpoint(desktop) {
         display: none;
     }
+   
     &:link,
     &:visited {
         color: white;
@@ -273,17 +274,17 @@
     justify-content: center;
     flex-direction: column;
     margin-right: 62px;
-    @include breakpoint(desktop) {
+    @include breakpoint(large-desktop) {
         display: none;
     }
-    // @include breakpoint(laptop) {
-    //     display: flex;
-    //     margin-left: auto;
-    //     margin-right: 74px;
-    // }
-    // @include breakpoint(mobile) {
-    //     display: none;
-    // }
+    @include breakpoint(small-tablet) {
+        display: flex;
+        margin-left: auto;
+        margin-right: 75px;
+    }
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .page-header__contacts-main-phone-link-wrapper {
@@ -438,8 +439,11 @@
     display: none;
     -webkit-tap-highlight-color: transparent;
     @include breakpoint(small-tablet) {
-        margin-left: auto;
+        // margin-left: auto;
         display: flex;
+    }
+    @include breakpoint(mobile) {
+        margin-left: auto;
     }
     &:link,
     &:visited {
