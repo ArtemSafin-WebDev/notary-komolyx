@@ -38,6 +38,7 @@
     flex-direction: column;
     flex-grow: 1;
     overflow-x: hidden;
+    padding-top: 183px;
     @include breakpoint(laptop) {
         padding-top: 120px;
     }

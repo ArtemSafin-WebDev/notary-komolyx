@@ -20,12 +20,12 @@ export default function() {
             if (!accordeonOpen) {
                 TweenMax.set(content, { clearProps: 'all' });
                 TweenMax.set(content, { height: 'auto' });
-                TweenMax.from(content, 0.7, { height: 0 });
+                TweenMax.from(content, 0.4, { height: 0 });
                 accordeonOpen = true;
             } else {
                 TweenMax.set(content, { clearProps: 'all' });
                 TweenMax.set(content, { height: 'auto' });
-                TweenMax.to(content, 0.7, { height: 0 });
+                TweenMax.to(content, 0.4, { height: 0 });
                 accordeonOpen = false;
             }
         })

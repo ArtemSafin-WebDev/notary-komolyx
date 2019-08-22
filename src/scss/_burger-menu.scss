@@ -101,6 +101,15 @@
     display: inline-block;
     position: relative;
     margin-top: 5px;
+    transition: color .2s;
+    -webkit-tap-highlight-color: transparent;
+    .no-touch &:hover,
+    .touch &:active {
+        color: $orange;
+        &::after {
+            background-color: $orange
+        }
+    }
     &::after {
         content: '';
         top: 100%;
@@ -110,6 +119,8 @@
         margin-top: 2px;
         background-color: $light-text;
         position: absolute;
+        transform-origin: left center;
+        transition: transform .2s, background-color .2s;
     }
 }
 

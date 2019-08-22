@@ -46,6 +46,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    -webkit-tap-highlight-color: transparent;
     svg {
         fill: $light-text;
         transition: fill 0.2s;

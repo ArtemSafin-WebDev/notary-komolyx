@@ -43,6 +43,19 @@
     font-size: 16px;
     line-height: 1.5;
     margin-left: auto;
+    position: relative;
+    &::after {
+        content: '';
+        height: 1px;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #9698b4;
+        transition: transform .2s;
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
 
     &:link,
     &:visited {
@@ -51,7 +64,9 @@
 
     .no-touch &:hover,
     .touch &:active {
-        text-decoration: underline;
+        &::after {
+            transform: scaleX(1);
+        }
     }
 }
 

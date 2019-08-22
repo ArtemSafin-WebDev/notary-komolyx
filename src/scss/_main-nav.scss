@@ -26,6 +26,16 @@
     display: block;
     transition: color 0.2s;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
+    &:link,
+    &:visited {
+        color: $blue-text;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: $orange;
+    }
     @include breakpoint(laptop) {
         padding: 3px 10px;
         font-size: 14px;
@@ -39,6 +49,9 @@
     .main-nav__list-item.active & {
         cursor: default;
         pointer-events: none;
+        @include breakpoint(small-tablet) {
+            color: $orange;
+        }
         &::after {
             content: '';
             pointer-events: none;
@@ -57,13 +70,5 @@
         }
     }
 
-    &:link,
-    &:visited {
-        color: $blue-text;
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        color: $orange;
-    }
+   
 }

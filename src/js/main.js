@@ -15,6 +15,8 @@ import selects from './selects';
 import datePicker from './datePicker';
 import modals from './modals';
 import faqAccordeons from './faqAccordeons';
+import fixHeader from './fixHeader';
+import hideHeader from './hideHeader';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -117,4 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Аккордеоны Вопрос-ответ
 
     faqAccordeons();
+
+    // Зафиксировать хедер
+
+    fixHeader();
+
+    // Прячем хедер при скролле вниз
+
+    hideHeader();
+    
 });

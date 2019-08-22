@@ -65,6 +65,13 @@
     font-size: 14px;
     line-height: 2;
     color: #9698B4;
+    position: relative;
+    transition: color .2s;
+    -webkit-tap-highlight-color: transparent;
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
     @include breakpoint(laptop) {
         display: block;
     }
@@ -84,14 +91,27 @@
     line-height: 2;
     color: #9698B4;
     margin-left: auto;
+    transition: opacity .2s;
     @include breakpoint(mobile) {
         margin-left: 0;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .page-footer__made-by-logo {
+            color: #ED3024;
+        }
+        
     }
 }
 
 
 .page-footer__made-by-logo {
     margin-left: 10px;
+    flex-shrink: 0;
+    fill: white;
+    color: #393B74;
+    transition: fill .2s, color .2s;
 }
 
 
@@ -206,7 +226,8 @@
     font-size: 16px;
     line-height: 1.4;
     font-weight: 700;
-   
+    transition: color .2s;
+    -webkit-tap-highlight-color: transparent;
     &:link,
     &:visited {
         color: white;
@@ -214,7 +235,7 @@
 
     .no-touch &:hover,
     .touch &:active {
-        text-decoration: underline;
+        color: #9697B4;
     }
 }
 
@@ -258,6 +279,8 @@
     font-size: 18px;
     line-height: 1.8;
     display: block;
+    transition: color .2s;
+    -webkit-tap-highlight-color: transparent;
     &:link,
     &:visited {
         color: white;
@@ -265,7 +288,7 @@
 
     .no-touch &:hover,
     .touch &:active {
-        text-decoration: underline;
+        color: #9697B4;
     }
 }
 
@@ -277,19 +300,30 @@
     position: relative;
     display: inline-block;
     margin-top: 25px;
+    transition: color .2s;
     &::after {
         content: '';
         top: 100%;
-       
         left: 0;
         width: 100%;
         height: 1px;
         background-color: #9698B4;
         position: absolute;
+        transform-origin: left center;
+        transition: transform .2s, background-color .2s;
+        
     }
     &:link,
     &:visited {
         color: #9698B4;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: $orange;
+        &::after {
+            background-color: $orange;
+        }
     }
 }
 
@@ -334,6 +368,8 @@
     border-radius: 50px;
     padding: 22px 38px;
     align-self: flex-start;
+    transition: background-color .2s, color .2s;
+    -webkit-tap-highlight-color: transparent;
     @include breakpoint(mobile) {
         display: none;
     }
@@ -347,5 +383,11 @@
     &:link,
     &:visited {
         color: $blue-text;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: $orange;
+        color: white;
     }
 }

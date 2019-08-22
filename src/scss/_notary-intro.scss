@@ -77,8 +77,17 @@
             left: 0%;
             bottom: 10px;
             background-color: $orange;
+            transition: transform .2s;
+            transform-origin: left center;
             @include breakpoint(laptop) {
                 bottom: 5px;
+            }
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            &::before {
+                transform: scaleX(0);
             }
         }
     }
@@ -107,6 +116,13 @@
     display: inline-block;
     border-radius: 50px;
     margin-top: 40px;
+    transition: border-color .2s, color .2s;
+    -webkit-tap-highlight-color: transparent;
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: $orange;
+        color: $orange;
+    }
     @include breakpoint(laptop) {
         margin-top: 18px;
     }
