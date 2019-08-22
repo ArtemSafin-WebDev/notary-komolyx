@@ -1159,6 +1159,13 @@ img {
   position: relative;
   z-index: 1;
   background-color: #232661; }
+  .header-fixed .page-header__top-row {
+    opacity: 0;
+    visibility: hidden; }
+    @media only screen and (max-width: 968px) {
+      .header-fixed .page-header__top-row {
+        opacity: 1;
+        visibility: visible; } }
   .page-header__top-row > .container {
     display: flex;
     align-items: center;
@@ -1282,7 +1289,8 @@ img {
 
 .page-header__bottom-row {
   padding: 29px 0;
-  background-color: white; }
+  background-color: white;
+  transition: box-shadow .2s; }
   .page-header__bottom-row > .container {
     display: flex;
     align-items: center; }

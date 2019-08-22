@@ -30,6 +30,14 @@
     position: relative;
     z-index: 1;
     background-color: $blue;
+    .header-fixed & {
+        opacity: 0;
+        visibility: hidden;
+        @include breakpoint(small-tablet) {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
     > .container {
         display: flex;
         align-items: center;
@@ -193,7 +201,7 @@
 .page-header__bottom-row {
     padding: 29px 0;
     background-color: white;
-    
+    transition: box-shadow .2s;
 
     > .container {
         display: flex;
